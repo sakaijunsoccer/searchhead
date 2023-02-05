@@ -19,7 +19,8 @@
     "react-promise-tracker": "^2.1.1",
     "react-scripts": "5.0.1",
     "typescript": "^4.9.5",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "yarn": "^1.22.19"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -45,5 +46,11 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "http://0.0.0.0:8080/"
+  "proxy": "http://0.0.0.0:8080/",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.50.0",
+    "@typescript-eslint/parser": "^5.50.0",
+    "eslint": "^8.33.0",
+    "eslint-plugin-react": "^7.32.2"
+  }
 }

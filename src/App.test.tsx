@@ -19,10 +19,10 @@ describe('App', () => {
       })
     })
     global.fetch = jest.fn().mockImplementation(eventsMock)
-    assert(await screen.getByText("Search"))
+    assert(screen.getByText("Search"))
     const button = screen.getByRole('button')
     fireEvent.click(button);
-    assert(await screen.getByText("Loading..."))
+    assert(screen.getByText("Loading..."))
   
   });
 });
