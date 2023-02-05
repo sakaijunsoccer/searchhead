@@ -20,7 +20,7 @@ const App = (): JSX.Element => {
         const keyValues = words[i].split('=');
         if (keyValues.length === 1){
             keywords.push(encodeURIComponent(words[i]))
-        }else{
+        }else if (keyValues.length === 2){
             queryStringArray.push(encodeURIComponent(keyValues[0]) + '=' + encodeURIComponent(keyValues[1])) 
         }
     }
@@ -30,6 +30,7 @@ const App = (): JSX.Element => {
 
   const search = () => {
     setErrorMessage('');
+    setEvents([]);
     setpromiseInProgress(true);
     fetch('/api/v1/search?' + generateQueryString(query))
       .then((response) => response.json())
@@ -65,7 +66,7 @@ const App = (): JSX.Element => {
         {errorMessage && ( <h2 className="errorMessage"> {errorMessage} </h2>)}
       </div>
       
-      <div className="search-result">
+      <div className="searchResult">
         {promiseInProgress && (<h3>Loading...</h3>)}
         {
           events.map((event, index) => (
