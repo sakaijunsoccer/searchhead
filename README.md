@@ -14,6 +14,11 @@ $ npm --version
 8.19.2
 ```
 
+#### Install package
+```
+$ npm install
+```
+
 #### Run on local
 
 Follow the document below to start the backup server on port 8080.
