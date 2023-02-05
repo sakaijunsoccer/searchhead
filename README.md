@@ -1,6 +1,7 @@
 # SearchHead
 
-A demo app that makes /var/logr requests to the backend and displays them in the UI
+This server is the front-end. This frontend server send the backend [VarLogSearch](https://github.com/sakaijunsoccer/varlogsearch) with the file name in /var/log, the search keyword and the number of detected loglines, and the backend [VarLogSearch](https://github.com/sakaijunsoccer/varlogsearch) returns the most recent loglines found in the search. This front-end server will be a demo application for displaying logs found by search keywords from var log.
+
 
 ## QuickStart
 
@@ -22,13 +23,13 @@ $ npm install
 #### Run on local
 
 Follow the document below to start the backup server on port 8080.
-https://github.com/sakaijunsoccer/varlogsearch/blob/main/README.md
+[VarLogSearch Setup README](https://github.com/sakaijunsoccer/varlogsearch/blob/main/README.md)
 
 Start the server with the command below
 ```
 npm start
 ```
-Please visit http://0.0.0.0:3000
+Please go to http://0.0.0.0:3000
 
 #### Test
 ```
