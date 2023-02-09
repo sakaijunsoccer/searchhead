@@ -31,7 +31,9 @@ Start the server with the command below
 ```
 npm start
 ```
-Please go to http://0.0.0.0:3000
+Please go to http://0.0.0.0:3000. You could see the UI look like
+
+![alt text](https://github.com/sakaijunsoccer/searchhead/tree/main/doc/basic_ui.png)
 
 #### Test
 ```
