@@ -23,7 +23,7 @@ $ npm install
 #### Run on local
 
 Follow the document below to start the backup server on port 8080.<br />
-[VarLogSearch(Python)](https://github.com/sakaijunsoccer/varlogsearch/) <br />
+[VarLogSearch(Python)](https://github.com/sakaijunsoccer/varlogsearch/)
 or 
 [VarLogSearchJS(Node.js)](https://github.com/sakaijunsoccer/varlogsearchjs/)
 
