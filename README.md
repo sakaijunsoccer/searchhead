@@ -20,6 +20,11 @@ $ npm --version
 $ npm install
 ```
 
+#### Run Test
+```
+npm test
+```
+
 #### Run on local
 
 Follow the document below to start the backup server on port 8080.<br />
@@ -34,8 +39,3 @@ npm start
 Please go to http://0.0.0.0:3000. You could see the UI look like
 
 ![Basic UI](doc/basic_ui.png "basic_ui")
-
-#### Test
-```
-npm test
-```
