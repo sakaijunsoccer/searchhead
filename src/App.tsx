@@ -46,6 +46,7 @@ const App = (): JSX.Element => {
          }
       })
       .catch((err) => {
+        setpromiseInProgress(false);
         console.log(err);
       });
   };
