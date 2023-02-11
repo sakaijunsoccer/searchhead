@@ -13,7 +13,7 @@ const App = (): JSX.Element => {
   };
 
   const generateQueryString = (query: string) => {
-    const words = query.split(' ');
+    const words = query.split(' ').filter(Boolean);
     const queryStringArray = [];
     const keywords = [];
     for(let i=0; i < words.length; i++){
