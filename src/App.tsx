@@ -21,7 +21,6 @@ const App = (): JSX.Element => {
         if (keyValues.length === 2){
             const [key, value] = keyValues;
             if ((key !== 'filename') && (key !== 'limit')){
-              // TODO (sakaijunsoccer) Implement key=value serach in log file
               keywords.push(encodeURIComponent(words[i]))
             }
             queryStringArray.push(encodeURIComponent(key) + '=' + encodeURIComponent(value)) 
