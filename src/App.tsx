@@ -29,7 +29,11 @@ const App = (): JSX.Element => {
             keywords.push(encodeURIComponent(words[i]))
         }
     }
-    queryStringArray.push("keywords=" + keywords.join(','))
+    if (keywords.length === 0) {
+      queryStringArray.push("keywords=''")
+    } else{
+      queryStringArray.push("keywords=" + keywords.join(','))
+    }
     return queryStringArray.join('&');
   };
 
