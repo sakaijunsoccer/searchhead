@@ -19,11 +19,15 @@ const App = (): JSX.Element => {
     for(let i=0; i < words.length; i++){
         const keyValues = words[i].split('=');
         if (keyValues.length === 2){
-            queryStringArray.push(encodeURIComponent(keyValues[0]) + '=' + encodeURIComponent(keyValues[1])) 
+            const [key, value] = keyValues;
+            if ((key !== 'filename') && (key !== 'limit')){
+              // TODO (sakaijunsoccer) Implement key=value serach in log file
+              keywords.push(encodeURIComponent(words[i]))
+            }
+            queryStringArray.push(encodeURIComponent(key) + '=' + encodeURIComponent(value)) 
         }else{
             keywords.push(encodeURIComponent(words[i]))
         }
-
     }
     queryStringArray.push("keywords=" + keywords.join(','))
     return queryStringArray.join('&');
@@ -32,6 +36,10 @@ const App = (): JSX.Element => {
   const search = () => {
     setErrorMessage('');
     setEvents([]);
+    const queryString =  generateQueryString(query)
+    if (!queryString){
+      return
+    }
     setpromiseInProgress(true);
     fetch('/api/v1/search?' + generateQueryString(query))
       .then((response) => response.json())
