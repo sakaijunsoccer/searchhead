@@ -18,11 +18,12 @@ const App = (): JSX.Element => {
     const keywords = [];
     for(let i=0; i < words.length; i++){
         const keyValues = words[i].split('=');
-        if (keyValues.length === 1){
-            keywords.push(encodeURIComponent(words[i]))
-        }else if (keyValues.length === 2){
+        if (keyValues.length === 2){
             queryStringArray.push(encodeURIComponent(keyValues[0]) + '=' + encodeURIComponent(keyValues[1])) 
+        }else{
+            keywords.push(encodeURIComponent(words[i]))
         }
+
     }
     queryStringArray.push("keywords=" + keywords.join(','))
     return queryStringArray.join('&');
